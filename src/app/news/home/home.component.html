@@ -1,0 +1,178 @@
+<div class="mainTopNews">
+    <div class="container">
+        <div class="topnews">
+            <div class="row ">
+                <div class="col-6 topNewsimg">
+                    <img src="https://th-i.thgim.com/public/news/national/9s81vt/article66009660.ece/alternates/LANDSCAPE_660/19_Media_Persons_13_10_Delhi.jpg"
+                        alt="">
+                </div>
+                <div class="col-6">
+                    <mat-card class="example-card topNewsheadline">
+
+                        <mat-card-title> యుద్దం ఆపమంటూ పుతిన్ ను ఆదేశించగలమా : సీజేఐ ఎన్వీ రమణ - సుప్రీంలో వ్యాజ్యం..!!
+                        </mat-card-title>
+                        <mat-card-content>
+                            <p>
+                                
+                            </p>
+
+                        </mat-card-content>
+
+                        <mat-card-actions>
+                            <mat-icon><span class="material-symbols-outlined"> schedule </span></mat-icon> <span>2 days
+                                ago</span>
+                            <mat-icon><span class="material-symbols-outlined"> person </span></mat-icon>
+                            <span>Author</span>
+                            <mat-icon><span class="material-symbols-outlined">chat_bubble </span></mat-icon>
+                            <span>33</span>
+                        </mat-card-actions>
+
+                    </mat-card>
+                </div>
+            </div>
+
+            <div class="subTopnews" >
+                <div class="row">
+                    <div class="col-3" >
+                        <mat-card class="example-card" *ngFor=" let NImage of news">
+
+                            <img mat-card-image src="{{NImage.image}}" alt=" National news">
+                            <mat-card-content>
+                                <p>
+                                   {{NImage.content}}
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-button>LIKE</button>
+                                <button mat-button>SHARE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Temparory categories-->
+<!-- <div *ngFor="let categoryObj of news" class="mainCatogories">
+   <div class="subHead">{{categoryObj.categoryName}}</div> 
+   <div class="subTitles1">
+    <div class="row">
+        <div class="col-5" >
+            <div class="subCateImage">
+                <img src="{{categoryObj.image}}"
+                    alt="">
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="row">
+                <div class="col-6"  >
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    <div *ngFor="let newsObj of categoryObj.news">
+        <div class="subCateImage">
+            <img src="{{newsObj.image}}"
+                alt="">
+        </div>
+       <div>{{newsObj.title}}</div> 
+    </div>
+</div> -->
+
+
+
+
+ <!-- <div >
+    <div class="container">
+        <div class="subCatogories" *ngFor="let categoryObj of news" >
+            <div class="subHead" >
+                <h1>{{categoryObj.categoryName}}</h1>
+            </div>
+            <div class="subTitles1">
+                <div class="row">
+                    <div class="col-5"  *ngFor="let newsObj of categoryObj.news">
+                        <div class="subCateImage">
+                            <img src="{{newsObj.image}}"
+                                alt="">
+                        </div>
+                    </div>
+                    <div class="col-7">
+                        <div class="row">
+                            <div class="col-6 subCat">
+                                <mat-card class="example-card">
+
+                                    <img mat-card-image
+                                        src="https://th-i.thgim.com/public/news/national/9s81vt/article66009660.ece/alternates/LANDSCAPE_660/19_Media_Persons_13_10_Delhi.jpg"
+                                        alt="Photo of a Shiba Inu">
+                                    <mat-card-content>
+                                        <p>
+                                            సీఎం జగన్ కీలక నిర్ణయం తీసుకున్నారు. మంత్రిగా కీలక శాఖలు నిర్వహిస్తూ
+                                            హఠాన్మరణం చెందిన గౌతమ్ శాఖలను ఇతర మంత్రులకు కేటాయించారు. పరిశ్రమలు..ఐటీ శాఖా
+                                            మంత్రిగా దాదాపు మూడేళ్ల కాలం పాటు గౌతమ్ రెడ్డి వాటిని పర్యవేక్షించారు. ఆ
+                                            శాఖలతో పాటుగా స్కిల్ డెవలప్ మెంట్ సైతం ఆయనే చూసుకొనే వారు. మంత్రి ఆకాల
+                                            మరణంతో ఆ శాఖలు సీఎం పర్యవేక్షణలోకి వెళ్లాయి. అయితే, ఈ నెల 7వ తేదీ నుంచి ఏపీ
+                                            అసెంబ్లీ సమావేశాలు ప్రారంభం కానున్నాయి.
+                                        </p>
+                                    </mat-card-content>
+                                    <mat-card-actions>
+                                        <button mat-button>LIKE</button>
+                                        <button mat-button>SHARE</button>
+                                    </mat-card-actions>
+                                </mat-card>
+                            </div>
+                            <div class="col-6 subCat">
+
+                                <mat-card class="example-card">
+
+                                    <img mat-card-image
+                                        src="https://th-i.thgim.com/public/news/national/9s81vt/article66009660.ece/alternates/LANDSCAPE_660/19_Media_Persons_13_10_Delhi.jpg"
+                                        alt="Photo of a Shiba Inu">
+                                    <mat-card-content>
+                                        <p>
+                                            సీఎం జగన్ కీలక నిర్ణయం తీసుకున్నారు. మంత్రిగా కీలక శాఖలు నిర్వహిస్తూ
+                                            హఠాన్మరణం చెందిన గౌతమ్ శాఖలను ఇతర మంత్రులకు కేటాయించారు. పరిశ్రమలు..ఐటీ శాఖా
+                                            మంత్రిగా దాదాపు మూడేళ్ల కాలం పాటు గౌతమ్ రెడ్డి వాటిని పర్యవేక్షించారు. ఆ
+                                            శాఖలతో పాటుగా స్కిల్ డెవలప్ మెంట్ సైతం ఆయనే చూసుకొనే వారు. మంత్రి ఆకాల
+                                            మరణంతో ఆ శాఖలు సీఎం పర్యవేక్షణలోకి వెళ్లాయి. అయితే, ఈ నెల 7వ తేదీ నుంచి ఏపీ
+                                            అసెంబ్లీ సమావేశాలు ప్రారంభం కానున్నాయి.
+                                        </p>
+                                    </mat-card-content>
+                                    <mat-card-actions>
+                                        <button mat-button>LIKE</button>
+                                        <button mat-button>SHARE</button>
+                                    </mat-card-actions>
+                                </mat-card>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="subTitles2">
+                <div class="row">
+                    <div class="col-3" >
+                        <mat-card class="example-card">
+    
+                            <img mat-card-image src="" alt="Photo of a Shiba Inu">
+                            <mat-card-content>
+                                <p>
+                                    
+                                </p>
+                            </mat-card-content>
+                            <mat-card-actions>
+                                <button mat-button>LIKE</button>
+                                <button mat-button>SHARE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   -->

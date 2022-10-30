@@ -1,0 +1,111 @@
+.mainTopNews {
+    .container {
+        .topnews {
+            margin-top: 70px;
+
+            .topNewsimg {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .topNewsheadline {
+                height: 100%;
+
+
+                .mat-card-title {
+                    padding: 17px 0px;
+                    line-height: 33px;
+                    font-weight: bold;
+                }
+
+                .mat-card-content {
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 5;
+                        /* display: -webkit-box; */
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                        line-height: 21px;
+                    }
+                }
+
+            }
+
+            .subTopnews {
+                margin-top: 55px;
+
+                .mat-card {
+                    .mat-card-content {
+                        p {
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            -webkit-line-clamp: 5;
+                            /* display: -webkit-box; */
+                            -webkit-box-orient: vertical;
+                            display: -webkit-box;
+                            line-height: 21px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mainCatogories {
+
+    margin-top: 74px;
+
+    .subCatogories {
+        .subHead {
+            margin-top: 74px;
+
+            h1 {
+                font-weight: bold;
+                padding: 20px 0px;
+            }
+        }
+
+        .subTitles1 {
+
+            .subCateImage {
+                img {
+                    height: 500px;
+                    width: 100%;
+                    box-shadow: 0px 4px 7px 2px #808080a6;
+                }
+            }
+
+            .subCat {
+                .mat-card {
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        -webkit-line-clamp: 5;
+                        -webkit-box-orient: vertical;
+                        display: -webkit-box;
+                        line-height: 21px;
+
+                    }
+                }
+            }
+        }
+
+       .subTitles2{
+        margin-top: 52px;
+        .mat-card {
+            p {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 5;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                line-height: 21px;
+
+            }
+        }
+       }
+    }
+}

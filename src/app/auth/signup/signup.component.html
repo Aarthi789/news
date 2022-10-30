@@ -1,0 +1,117 @@
+
+
+
+<div class="signup">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 sm-6 xs-6 md-6 signupMain">
+            <form [formGroup]="signupForm">
+                <h3>Sign up</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6 md-6 xs-6">
+                        <!-- <mat-label> First Name</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="First Name" formControlName="firstName">
+                            <div *ngIf="g['firstName']['touched'] && g['firstName']['invalid']">
+                                <mat-error *ngIf="g['firstName']['errors']?.['required']">Please enter First Name
+                                </mat-error>
+                                <mat-error *ngIf="g['firstName']['errors']?.['minlength']"> First Name must be at least
+                                    6 characters </mat-error>
+                                <mat-error *ngIf="g['firstName']['errors']?.['maxlength']"> First Name must not exceed
+                                    20 characters</mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-lg-6 md-6 xs-6">
+                        <!-- <mat-label> Last Name</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="Last Name" formControlName="lastName">
+                            <div *ngIf="g['lastName']['touched'] && g['lastName']['invalid']">
+                                <mat-error *ngIf="g['lastName']['errors']?.['required']">Please enter lastName
+                                </mat-error>
+
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- <mat-label> Email Id</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="Enter Email Id" formControlName="email">
+                            <div *ngIf="g['email']['touched'] && g['email']['invalid']">
+                                <mat-error *ngIf="g['email']['errors']?.['required']">Please enter Email Id</mat-error>
+                                <mat-error *ngIf="g['email']['errors']?.['pattern']">Please enter valid Email Id
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12">
+                        <!-- <mat-label> Contact No</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="Contact No" formControlName="contact">
+                            <div *ngIf="g['contact']['touched'] && g['contact']['invalid']">
+                                <mat-error *ngIf="g['contact']['errors']?.['required']">Please enter mobile number
+                                </mat-error>
+                                <mat-error *ngIf="g['contact']['errors']?.['pattern']">Mobile number is not 10 digit
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <!-- <mat-label> Password</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="password" formControlName="password">
+                            <div *ngIf="g['password']['touched'] && g['password']['invalid']">
+                                <mat-error *ngIf="g['password'].errors?.['required']">Please enter password</mat-error>
+                                <mat-error *ngIf="g['password'].errors?.['pattern']">
+
+                                    Password must contain at least one number, one uppercase and a lowercase letter
+                                    and at least 8 characters<br>Password cannot contain whitespace
+
+                                </mat-error>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-6">
+                        <!-- <mat-label>Confirm Password</mat-label> -->
+                        <mat-form-field class="full-width">
+                            <input placeholder="confirmPassword" formControlName="confirmPassword">
+                            <div *ngIf="g['confirmPassword'].invalid &&(g['confirmPassword'].dirty || g['confirmPassword'].touched)" >
+                            <!-- <mat-error *ngIf="g['confirmPassword'].errors?.['confirmedValidator']">
+                                Passwords did not match
+                              </mat-error> -->
+                              <mat-error *ngIf="g['confirmPassword'].errors?.['confirmedValidator']">
+                                
+                                    Confirm Password didn't match.
+                              </mat-error>
+                            </div>
+                        </mat-form-field>
+
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-12">
+                        <mat-radio-group class="margin-left" formControlName="role">
+                            <mat-radio-button value="admin">Admin</mat-radio-button>
+                            <mat-radio-button value="user">User</mat-radio-button>
+                        </mat-radio-group>
+
+                    </div>
+                </div>
+
+                <button class="submitbtn" (click)="submitForm()" routerLink='/'> Submit </button>
+
+            </form>
+        </div>
+    </div>
+</div>
